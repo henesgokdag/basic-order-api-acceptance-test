@@ -21,10 +21,10 @@ public class PeopleResponse {
     private String birthYear;
     private String gender;
     private String homeworld;
-    private List<String> films;
-    private List<Object> species;
-    private List<String> vehicles;
-    private List<String> starships;
+    private List<String> films = null;
+    private List<String> species = null;
+    private List<String> vehicles = null;
+    private List<String> starships = null;
     private String created;
     private String edited;
     private String url;
