@@ -26,9 +26,9 @@ public class OrderApiTest extends BaseServiceTest {
         configureFor("localhost",8083);
     }
 
-    public PeopleResponse mockGetPeople(OrderRequest orderRequest,Boolean isVarthVader) throws JsonProcessingException {
+    public PeopleResponse mockGetPeople(OrderRequest orderRequest,Boolean isDarthVader) throws JsonProcessingException {
         PeopleResponse peopleResponse = RandomDataProvider.random().nextObject(PeopleResponse.class);
-        if(isVarthVader) peopleResponse.setName("Darth Vader");
+        if(isDarthVader) peopleResponse.setName("Darth Vader");
         String response = objectMapper.writeValueAsString(peopleResponse);
          stubFor(get("/people/"+orderRequest.getPeopleId())
                 .willReturn(aResponse()
